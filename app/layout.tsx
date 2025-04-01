@@ -8,16 +8,37 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Arnav Malhotra",
   description: "Computer Engineering student at York University. Passionate about building impactful software solutions.",
+  metadataBase: new URL('https://arnavmalhotra.com'),
   openGraph: {
     title: "Arnav Malhotra",
     description: "Computer Engineering student at York University. Passionate about building impactful software solutions.",
     type: "website",
+    url: "https://arnavmalhotra.com",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Arnav Malhotra - Developer Portfolio"
+      }
+    ],
+    locale: "en_US",
+    siteName: "Arnav Malhotra"
   },
   twitter: {
+    card: "summary_large_image",
     title: "Arnav Malhotra",
     description: "Computer Engineering student at York University. Passionate about building impactful software solutions.",
-    card: "summary_large_image",
+    images: ["/og-image.png"],
+    creator: "@your_twitter",
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  icons: {
+    icon: "/favicon.ico",
+  }
 };
 
 export default function RootLayout({
