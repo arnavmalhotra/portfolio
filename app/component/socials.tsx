@@ -21,7 +21,7 @@ export default function Socials() {
         <div className="p-4">
         <Button>
           <MailIcon />
-          <Link href="mailto:arnav196@my.yorku.ca@gmail.com">Contact</Link>
+          <Link href="mailto:arnav196@my.yorku.ca">Contact</Link>
           </Button>
         </div>
       </div>

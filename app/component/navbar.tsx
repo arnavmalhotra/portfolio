@@ -1,27 +1,49 @@
 "use client";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname } from 'next/navigation';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <>
-      <div className="flex justify-center w-full h-16 p-4 border-solid border-b-2 border-gray-600">
-        <div className="flex gap-4 items-center">
-            <Button variant={pathname === "/" ? "secondary" : "ghost"}>
-              <Link href="/">Home</Link>
-            </Button>
-            <Button variant={pathname === "/about" ? "secondary" : "ghost"}>
-              <Link href="/about">About</Link>
-            </Button>
-            <Button variant={pathname === "/projects" ? "secondary" : "ghost"}>
-              <Link href="/projects">Projects</Link>
-            </Button>
+    <div className="fixed top-0 left-0 right-0 z-50 flex justify-center p-5">
+      <motion.nav 
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className="px-4 py-2 rounded-full bg-zinc-900/50 backdrop-blur-md border border-zinc-800/50 shadow-lg shadow-black/10"
+      >
+        <div className="flex items-center gap-8">
+          <Link href="/" passHref>
+            <motion.a
+              className={`text-sm font-medium transition-colors ${
+                pathname === '/' ? 'text-white' : 'text-gray-400'
+              } hover:text-white`}
+              whileHover={{ y: -1 }}
+            >
+              home
+            </motion.a>
+          </Link>
+          
+          {[
+            { path: '/about', label: 'about' },
+            { path: '/projects', label: 'projects' }
+          ].map(({ path, label }) => (
+            <Link key={path} href={path} passHref>
+              <motion.a
+                className={`text-sm font-medium transition-colors ${
+                  pathname === path ? 'text-white' : 'text-gray-400'
+                } hover:text-white`}
+                whileHover={{ y: -1 }}
+              >
+                {label}
+              </motion.a>
+            </Link>
+          ))}
 
         </div>
-      </div>
-    </>
+      </motion.nav>
+    </div>
   );
 }

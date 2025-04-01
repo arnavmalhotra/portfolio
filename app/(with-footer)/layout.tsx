@@ -7,7 +7,9 @@ export default function WithFooterLayout({
 }) {
   return (
     <>
-      {children}
+      <div className="flex flex-col min-h-screen">
+        {children}
+      </div>
       <Footer />
     </>
   );
