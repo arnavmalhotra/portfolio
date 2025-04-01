@@ -1,24 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Portfolio Website
 
-## Getting Started
+A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS. This project showcases a clean and professional design with smooth animations and a dark/light theme support.
 
-First, run the development server:
+## 🚀 Features
 
+- ⚡️ Next.js 15 with App Router
+- 🎨 Tailwind CSS for styling
+- 🌓 Dark/Light mode support
+- 📱 Fully responsive design
+- ✨ Smooth animations with Framer Motion
+- 🔍 SEO optimized
+- 🎯 TypeScript for type safety
+- 🎨 Modern UI components with Radix UI
+
+## 🛠️ Tech Stack
+
+- **Framework:** Next.js 15
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **UI Components:** Radix UI
+- **Animations:** Framer Motion
+- **Icons:** Lucide React & React Icons
+- **Theme:** next-themes
+- **Type Animation:** react-type-animation
+
+## 📦 Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/arnavmalhotra/portfolio.git
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev` - Start the development server with Turbopack
+- `npm run build` - Build the production application
+- `npm run start` - Start the production server
+- `npm run lint` - Run ESLint for code linting
+
+## 📁 Project Structure
+
+```
+portfolio/
+├── app/              # Next.js app directory
+├── components/       # Reusable UI components
+├── lib/             # Utility functions and configurations
+├── public/          # Static assets
+└── styles/          # Global styles
+```
+
+## 🔧 Configuration
+
+The project uses various configuration files:
+
+- `next.config.ts` - Next.js configuration
+- `tsconfig.json` - TypeScript configuration
+- `tailwind.config.js` - Tailwind CSS configuration
+- `postcss.config.mjs` - PostCSS configuration
+- `eslint.config.mjs` - ESLint configuration
+
+## 📝 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
+
+## 👤 Author
+
+Your Name
+- GitHub: [@arnavmalhotra](https://github.com/arnavmalhotra)
+- LinkedIn: [Arnav Malhotra](https://www.linkedin.com/in/arnav-malhotra-ab424218b/)
+- Email: arnav196@my.yorku.ca
 
 ## Learn More
 
