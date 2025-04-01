@@ -29,7 +29,7 @@ const ProjectCard = ({ title, description, link, tech, points, media, index }: P
         delay: index * 0.1,
         ease: [0.43, 0.13, 0.23, 0.96],
       }}
-      className="group relative bg-zinc-900/50 rounded-lg overflow-hidden hover:bg-zinc-900/80 transition-all cursor-pointer"
+      className="group relative bg-zinc-900/50 backdrop-blur-md rounded-lg overflow-hidden hover:bg-zinc-900/70 transition-all cursor-pointer dark:bg-zinc-200 dark:text-gray-900"
       whileHover={{ y: -4 }}
     >
       {media && (
@@ -44,8 +44,9 @@ const ProjectCard = ({ title, description, link, tech, points, media, index }: P
                 className="w-full h-auto transition-transform duration-500 group-hover:scale-105 transform-gpu"
                 style={{ transformOrigin: 'center center' }}
                 priority={index === 0}
+                quality={100}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 dark:from-zinc-200/50" />
             </div>
           ) : (
             <div className="relative w-full">
@@ -58,7 +59,7 @@ const ProjectCard = ({ title, description, link, tech, points, media, index }: P
                 className="w-full h-auto transition-transform duration-500 group-hover:scale-105 transform-gpu"
                 style={{ transformOrigin: 'center center' }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 dark:from-zinc-200/50" />
             </div>
           )}
         </div>
@@ -66,24 +67,24 @@ const ProjectCard = ({ title, description, link, tech, points, media, index }: P
       
       <div className="p-6">
         <div className="flex justify-between items-start">
-          <h3 className="text-lg font-semibold text-white group-hover:text-white/90 transition-colors">{title}</h3>
-          <HiExternalLink className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
+          <h3 className="text-lg font-semibold text-white dark:text-gray-900 group-hover:text-white/90 dark:group-hover:text-gray-900/90 transition-colors">{title}</h3>
+          <HiExternalLink className="w-5 h-5 text-gray-400 dark:text-gray-600 group-hover:text-white dark:group-hover:text-gray-900 transition-colors" />
         </div>
-        <p className="text-sm text-gray-400 mt-2 group-hover:text-gray-300 transition-colors">{description}</p>
+        <p className="text-sm text-gray-400 dark:text-gray-600 mt-2 group-hover:text-gray-300 dark:group-hover:text-gray-700 transition-colors">{description}</p>
         <div className="mt-4">
           <div className="flex flex-wrap gap-2 mb-4">
             {tech.map((t, i) => (
               <span
                 key={i}
-                className="text-xs px-2 py-1 rounded-full bg-zinc-800 text-gray-300 group-hover:bg-zinc-700/80 transition-colors"
+                className="text-xs px-2 py-1 rounded-full bg-zinc-800 text-gray-300 dark:bg-zinc-300 dark:text-gray-900 group-hover:bg-zinc-700/80 dark:group-hover:bg-zinc-400/80 transition-colors"
               >
                 {t}
               </span>
             ))}
           </div>
-          <ul className="list-disc list-inside text-sm space-y-1 text-gray-300">
+          <ul className="list-disc list-inside text-sm space-y-1 text-gray-300 dark:text-gray-700">
             {points.map((point, i) => (
-              <li key={i} className="group-hover:text-gray-200 transition-colors">{point}</li>
+              <li key={i} className="group-hover:text-gray-200 dark:group-hover:text-gray-800 transition-colors">{point}</li>
             ))}
           </ul>
         </div>
