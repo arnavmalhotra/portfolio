@@ -46,15 +46,20 @@ export default function Navbar() {
           ))}
 
           <motion.button
-            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            onClick={() => {
+              if (theme === 'light') {
+                setTheme('dark');
+              } else {
+                setTheme('light');
+              }
+            }}
             className="p-2 rounded-full hover:bg-zinc-800/50 transition-colors"
             whileHover={{ y: -1 }}
           >
-            {theme === 'dark' ? (
+            {theme === 'light' ? (
               <Moon className="w-5 h-5 text-gray-400" />
             ) : (
               <Sun className="w-5 h-5 text-gray-400" />
-
             )}
           </motion.button>
         </div>
