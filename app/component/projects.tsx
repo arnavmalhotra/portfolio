@@ -96,15 +96,29 @@ const ProjectCard = ({ title, description, link, tech, points, media, index }: P
 export default function Projects() {
   const projects = [
     {
+      title: "SuperchargedNotes",
+      description: "AI platform leveraging OCR to convert 5+ note formats into structured markdown.",
+      link: "https://superchargednotes.com",
+      tech: ["FastAPI", "PostgreSQL", "Next.js", "TypeScript"],
+      points: [
+        "Built full-stack OCR platform converting 5+ note formats to markdown with 90% accuracy.",
+        "Created AI study tools (quizzes, flashcards, summaries) reducing prep time by 40%."
+      ],
+      media: {
+        type: "image" as const,
+        url: "/projects/superchargednotes.png",
+        alt: "SuperchargedNotes Platform"
+      }
+    },
+    {
       title: "OneTimeTable",
       description: "A unified dashboard for students to manage course schedules and academic planning",
       link: "https://onetimetable.org",
-      tech: ["FastAPI", "MongoDB", "Next.js"],
+      tech: ["FastAPI", "MongoDB", "Next.js", "Redis"],
       points: [
-        "Developed a full-stack web app with OpenRouter-driven LLM pipelines",
-        "Built Chrome extension for real-time class and deadline previews",
-        "Implemented Redis-based caching and multiple export formats",
-        "Onboarded 50+ students across 4 universities in first month"
+        "Developed student dashboard, achieving 50+ users & 35+ extension installs.",
+        "Automated data extraction using LLMs (95% accuracy), saving students 3 hrs/semester.",
+        "Improved performance with Redis caching, cutting load times by 60%."
       ],
       media: {
         type: "image" as const,
@@ -118,9 +132,8 @@ export default function Projects() {
       link: "https://ineedhelp.yorku.dev",
       tech: ["React", "FastAPI", "PostgreSQL", "JWT Auth"],
       points: [
-        "Built full-stack system for browsing 80+ academic and wellness resources",
-        "Implemented secure JWT authentication and admin dashboard",
-        "Achieved 1000+ page visits and 50+ recurring users in two months"
+        "Built platform for 80+ university services, attracting 1000+ visits & 50+ recurring users.",
+        "Reduced student search time for support resources by 25%."
       ],
       media: {
         type: "image" as const,
@@ -132,11 +145,10 @@ export default function Projects() {
       title: "York University Calendar Project",
       description: "Diversity calendar showcasing religious and cultural events",
       link: "https://dedi.eecs.yorku.ca",
-      tech: ["FastAPI", "React", "MongoDB", "Selenium"],
+      tech: ["FastAPI", "React", "MongoDB", "Selenium", "LLMs"],
       points: [
-        "Automated scraping of 10+ sources with Gemini AI integration",
-        "Cut content creation time by 85%",
-        "Deployed tool adopted by 200+ faculty and staff"
+        "Deployed diversity events calendar, adopted by 200+ faculty/staff.",
+        "Automated content generation via scraping & LLMs, reducing curation effort by 90%."
       ],
       media: {
         type: "image" as const,
@@ -147,12 +159,12 @@ export default function Projects() {
   ];
 
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="grid gap-8"
+        className="grid gap-6 sm:gap-8"
       >
         {projects.map((project, index) => (
           <ProjectCard key={index} {...project} index={index} />

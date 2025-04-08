@@ -6,10 +6,19 @@ import { HiX, HiDownload, HiExternalLink } from 'react-icons/hi';
 export default function ResumeViewer() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleViewResumeClick = () => {
+    // Check if window is defined (for SSR safety) and if width is less than md breakpoint (768px)
+    if (typeof window !== 'undefined' && window.innerWidth < 768) {
+      window.open('/resume.pdf', '_blank');
+    } else {
+      setIsOpen(true);
+    }
+  };
+
   return (
     <>
       <motion.button
-        onClick={() => setIsOpen(true)}
+        onClick={handleViewResumeClick}
         className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-zinc-900 hover:bg-gray-200 transition-colors dark:bg-zinc-900 dark:text-white dark:hover:bg-zinc-800"
         whileHover={{ y: -2 }}
       >
