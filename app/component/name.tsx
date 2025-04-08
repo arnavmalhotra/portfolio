@@ -15,8 +15,6 @@ export default function Name() {
             2000,
             'Student',
             2000,
-            'Problem Solver',
-            2000,
             'Tech Enthusiast',
             2000,
           ]}
