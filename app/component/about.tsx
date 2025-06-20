@@ -32,7 +32,7 @@ export default function About() {
         <div className="bg-zinc-900/50 rounded-lg p-6 hover:bg-zinc-900/70 transition-colors dark:bg-zinc-200 dark:text-gray-900">
           <div className="space-y-2">
             <h3 className="text-lg font-medium text-white dark:text-gray-900">York University</h3>
-            <p className="text-sm">Bachelor of Engineering in Computer Engineering</p>
+            <p className="text-sm">Bachelor of Engineering in Software Engineering</p>
             <p className="text-sm text-gray-400 dark:text-gray-600">Expected May 2027 • Toronto, ON</p>
           </div>
         </div>
@@ -53,14 +53,12 @@ export default function About() {
           <div className="bg-zinc-900/50 rounded-lg p-6 hover:bg-zinc-900/70 transition-colors dark:bg-zinc-200 dark:text-gray-900">
             <div className="space-y-3">
               <div>
-                <h3 className="text-lg font-medium text-white dark:text-gray-900">Research Fellow</h3>
-                <p className="text-sm">Indian Institute of Technology, Roorkee</p>
-                <p className="text-sm text-gray-400 dark:text-gray-600">May 2024 - July 2024</p>
+                <h3 className="text-lg font-medium text-white dark:text-gray-900">Software Engineering Intern</h3>
+                <p className="text-sm">Quarkle.ai</p>
+                <p className="text-sm text-gray-400 dark:text-gray-600">Present</p>
               </div>
               <ul className="list-disc list-inside text-sm space-y-2 ml-2">
-                <li>Researched hybrid BCos-KAN architectures for improved image segmentation</li>
-                <li>Built interpretable EEG-based pipelines for seizure detection</li>
-                <li>Designed lightweight CNN-transformer models for mobile image enhancement</li>
+                <li>Currently working as a software engineering intern</li>
               </ul>
             </div>
           </div>
@@ -68,14 +66,56 @@ export default function About() {
           <div className="bg-zinc-900/50 rounded-lg p-6 hover:bg-zinc-900/70 transition-colors dark:bg-zinc-200 dark:text-gray-900">
             <div className="space-y-3">
               <div>
-                <h3 className="text-lg font-medium text-white dark:text-gray-900">Software Development Intern</h3>
-                <p className="text-sm">Parcon India Private Limited • Kolkata</p>
-                <p className="text-sm text-gray-400 dark:text-gray-600">July 2024 - Sept 2024</p>
+                <h3 className="text-lg font-medium text-white dark:text-gray-900">Lead Software Developer</h3>
+                <p className="text-sm">OneTimeTable • Remote</p>
+                <p className="text-sm text-gray-400 dark:text-gray-600">Jan 2025 - Present</p>
               </div>
               <ul className="list-disc list-inside text-sm space-y-2 ml-2">
-                <li>Developed automation solutions for invoice and delivery order handling</li>
-                <li>Created C and Python scripts integrated with Excel and ERP systems</li>
-                <li>Reduced back-office errors by 80% and saved 90+ hours per week</li>
+                <li>Developed a full-stack student dashboard using FastAPI, MongoDB, and Next.js; drove adoption to 50+ users across 4 universities and achieved 35+ companion Chrome extension installs</li>
+                <li>Automated course data extraction via LLM pipelines, achieving 95% accuracy on schedules and syllabi, and added multi-format export options that integrate with external calendar platforms, saving students up to 3 hours per semester</li>
+                <li>Enhanced performance and usability via Redis caching, reducing average load times by 60%</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="bg-zinc-900/50 rounded-lg p-6 hover:bg-zinc-900/70 transition-colors dark:bg-zinc-200 dark:text-gray-900">
+            <div className="space-y-3">
+              <div>
+                <h3 className="text-lg font-medium text-white dark:text-gray-900">Software Developer</h3>
+                <p className="text-sm">York University • Toronto, ON</p>
+                <p className="text-sm text-gray-400 dark:text-gray-600">Oct 2024 - April 2025</p>
+              </div>
+              <ul className="list-disc list-inside text-sm space-y-2 ml-2">
+                <li>Developed and deployed a full-stack calendar application that surfaces diversity events using FastAPI, MongoDB, and React; achieved adoption by 200+ faculty and staff</li>
+                <li>Automated content generation via Selenium scraping across 10+ sources and leveraged LLMs for description generation, cutting manual curation effort by 90%</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="bg-zinc-900/50 rounded-lg p-6 hover:bg-zinc-900/70 transition-colors dark:bg-zinc-200 dark:text-gray-900">
+            <div className="space-y-3">
+              <div>
+                <h3 className="text-lg font-medium text-white dark:text-gray-900">Software Developer Intern</h3>
+                <p className="text-sm">Parcon India Private Limited • Kolkata, India</p>
+                <p className="text-sm text-gray-400 dark:text-gray-600">Jul 2024 - Sep 2024</p>
+              </div>
+              <ul className="list-disc list-inside text-sm space-y-2 ml-2">
+                <li>Created C/Python automation scripts integrated with Excel and ERP systems, transforming manual document workflows handling thousands of invoices and delivery orders monthly</li>
+                <li>Automated document signing and uploading, leading to 90+ weekly staff-hours saved, elimination of administrative errors, and faster processing</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="bg-zinc-900/50 rounded-lg p-6 hover:bg-zinc-900/70 transition-colors dark:bg-zinc-200 dark:text-gray-900">
+            <div className="space-y-3">
+              <div>
+                <h3 className="text-lg font-medium text-white dark:text-gray-900">Research Fellow</h3>
+                <p className="text-sm">Indian Institute of Technology, Roorkee • Roorkee, India</p>
+                <p className="text-sm text-gray-400 dark:text-gray-600">May 2024 - Jul 2024</p>
+              </div>
+              <ul className="list-disc list-inside text-sm space-y-2 ml-2">
+                <li>Enhanced transparency in AI decision-making for medical applications via research into hybrid BCos-KAN architectures for MRI segmentation and explainable EEG seizure-detection pipelines</li>
+                <li>Engineered lightweight CNN-transformer models for mobile image enhancement, achieving DSLR-quality output while reducing model size by 50% compared to baseline architectures</li>
               </ul>
             </div>
           </div>
@@ -98,7 +138,7 @@ export default function About() {
             <div>
               <h3 className="text-white font-medium mb-2 dark:text-gray-900">Languages</h3>
               <div className="flex flex-wrap gap-2">
-                {["Python", "C", "JavaScript"].map((skill) => (
+                {["Java", "Python", "C", "JavaScript", "TypeScript", "HTML", "CSS", "SQL"].map((skill) => (
                   <span key={skill} className="px-3 py-1 bg-zinc-800 rounded-full text-sm dark:text-gray-900 dark:bg-zinc-300">
                     {skill}
                   </span>
@@ -108,7 +148,7 @@ export default function About() {
             <div>
               <h3 className="text-white font-medium mb-2 dark:text-gray-900">Frameworks</h3>
               <div className="flex flex-wrap gap-2">
-                {["FastAPI", "MongoDB", "PostgreSQL", "Next.js", "React", "Selenium"].map((skill) => (
+                {["FastAPI", "Next.js", "React", "Node.js"].map((skill) => (
                   <span key={skill} className="px-3 py-1 bg-zinc-800 rounded-full text-sm dark:text-gray-900 dark:bg-zinc-300">
                     {skill}
                   </span>
@@ -116,9 +156,19 @@ export default function About() {
               </div>
             </div>
             <div>
-              <h3 className="text-white font-medium mb-2 dark:text-gray-900">Libraries</h3>
+              <h3 className="text-white font-medium mb-2 dark:text-gray-900">Databases</h3>
               <div className="flex flex-wrap gap-2">
-                {["PyTorch", "NumPy", "Matplotlib", "Redis"].map((skill) => (
+                {["PostgreSQL", "MongoDB", "Redis"].map((skill) => (
+                  <span key={skill} className="px-3 py-1 bg-zinc-800 rounded-full text-sm dark:text-gray-900 dark:bg-zinc-300">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h3 className="text-white font-medium mb-2 dark:text-gray-900">Libraries/Tools</h3>
+              <div className="flex flex-wrap gap-2">
+                {["PyTorch", "NumPy", "Pandas", "Matplotlib", "Selenium", "Git", "Docker", "Tailwind CSS", "JWT"].map((skill) => (
                   <span key={skill} className="px-3 py-1 bg-zinc-800 rounded-full text-sm dark:text-gray-900 dark:bg-zinc-300">
                     {skill}
                   </span>
