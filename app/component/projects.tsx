@@ -96,6 +96,22 @@ const ProjectCard = ({ title, description, link, tech, points, media, index }: P
 export default function Projects() {
   const projects = [
     {
+      title: "nnU-Net FCD-II Segmentation (Research)",
+      description: "Automated segmentation of FCD type II lesions in 3D FLAIR MRI using nnU-Net.",
+      link: "https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2025.1601815/abstract",
+      tech: ["Python", "PyTorch", "nnU-Net", "NumPy"],
+      points: [
+        "Proposed automated axial FLAIR slice selection by peak voxel intensity (top 5 slices).",
+        "Trained nnU-Net with 5-fold cross-validation on MRI from 85 FCD-II subjects.",
+        "Published in Frontiers in Artificial Intelligence (2025)."
+      ],
+      media: {
+        type: "image" as const,
+        url: "/projects/research.png",
+        alt: "Frontiers in Artificial Intelligence"
+      }
+    },
+    {
       title: "SuperchargedNotes",
       description: "AI platform leveraging OCR to convert 5+ note formats into structured markdown.",
       link: "https://superchargednotes.com",
