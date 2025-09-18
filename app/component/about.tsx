@@ -55,17 +55,30 @@ export default function About() {
               <div>
                 <h3 className="text-lg font-medium text-white dark:text-gray-900">Software Engineering Intern</h3>
                 <p className="text-sm">Quarkle.ai</p>
-                <p className="text-sm text-gray-400 dark:text-gray-600">Jun 2025 - Dec 2025</p>
+                <p className="text-sm text-gray-400 dark:text-gray-600">Jul 2025 – Dec 2025</p>
               </div>
               <ul className="list-disc list-inside text-sm space-y-2 ml-2">
-                <li>Developed a public document sharing system enabling authors to showcase their work, driving <span className="font-semibold">30% increase in engagement</span> and facilitating collaboration among <span className="font-semibold">500 writers</span></li>
-                <li>Architected an agent-based AI system using FastAPI WebSocket server and Flask backend, engineered smart data and context pipelines with vector databases to optimize retrieval, improving context retention by <span className="font-semibold">85%</span> and reducing response latency by <span className="font-semibold">40%</span></li>
-                <li>Optimized frontend with debouncing, auto-save, and streamlined editing in Next.js, yielding <span className="font-semibold">50% faster performance</span> and improved UX</li>
+                <li>Designed and deployed an agentic AI system with Python FastAPI websockets for real-time retrieval; boosted knowledge retention by <span className="font-semibold">85%</span> and reduced hallucinations by <span className="font-semibold">60%</span> through custom pipelines and memory indexing</li>
+                <li>Optimized a Next.js frontend to handle documents up to <span className="font-semibold">1M words</span> using debouncing, diffing, and caching; cut rendering latency by <span className="font-semibold">40%</span> and improved performance by <span className="font-semibold">45%</span>, enabling seamless long-document handling</li>
+                <li>Built a public document-sharing system enabling authors to showcase work and collaborate; drove a <span className="font-semibold">30% increase in engagement</span> across a community of <span className="font-semibold">500+ writers</span></li>
               </ul>
             </div>
           </div>
 
-          
+          <div className="bg-zinc-900/50 rounded-lg p-6 hover:bg-zinc-900/70 transition-colors dark:bg-zinc-200 dark:text-gray-900">
+            <div className="space-y-3">
+              <div>
+                <h3 className="text-lg font-medium text-white dark:text-gray-900">Software Development Contractor</h3>
+                <p className="text-sm">Markis Investments</p>
+                <p className="text-sm text-gray-400 dark:text-gray-600">Apr 2025 – Jun 2025</p>
+              </div>
+              <ul className="list-disc list-inside text-sm space-y-2 ml-2">
+                <li>Delivered a direct booking website for a luxury resort using Next.js, PostgreSQL, Git LFS, and S3 buckets; increased sales by <span className="font-semibold">40%</span> and processed <span className="font-semibold">$100K revenue</span> in the first month</li>
+                <li>Built a QR-based event management system providing real-time attendee tracking and analytics; deployed across <span className="font-semibold">5 events</span> with <span className="font-semibold">500+ participants</span>, reducing manual errors and bottlenecks</li>
+                <li>Developed guest-facing portals for facility booking, payments, and information access; improved customer experience and adoption by <span className="font-semibold">150+ users</span> within the first month</li>
+              </ul>
+            </div>
+          </div>
 
           <div className="bg-zinc-900/50 rounded-lg p-6 hover:bg-zinc-900/70 transition-colors dark:bg-zinc-200 dark:text-gray-900">
             <div className="space-y-3">
@@ -75,8 +88,8 @@ export default function About() {
                 <p className="text-sm text-gray-400 dark:text-gray-600">Oct 2024 - Apr 2025</p>
               </div>
               <ul className="list-disc list-inside text-sm space-y-2 ml-2">
-                <li>Developed and deployed a full-stack calendar application that surfaces diversity events using FastAPI, MongoDB, and React; achieved adoption by <span className="font-semibold">200 faculty and staff</span></li>
-                <li>Automated content generation via Selenium scraping across <span className="font-semibold">10 sources</span> and leveraged LLMs for description generation, cutting manual curation effort by <span className="font-semibold">90%</span></li>
+                <li>Engineered a data scraping pipeline aggregating from <span className="font-semibold">20+ sources</span> with validation, retries, and exception handling; ensured <span className="font-semibold">98% accuracy</span> in extracted datasets for downstream applications</li>
+                <li>Developed a React-based calendar surfacing cultural events across campus; adopted by <span className="font-semibold">1,300+ students and faculty</span>, strengthening accessibility and engagement</li>
               </ul>
             </div>
           </div>
@@ -89,9 +102,8 @@ export default function About() {
                 <p className="text-sm text-gray-400 dark:text-gray-600">May 2024 - Jul 2024</p>
               </div>
               <ul className="list-disc list-inside text-sm space-y-2 ml-2">
-                <li>Designed an automated slice selection method ranking MRI slices by peak voxel intensity, retaining top five lesion-rich slices per scan for FCD type II lesion detection</li>
-                <li>Trained and evaluated nnU-Net models on MRI data from <span className="font-semibold">85 subjects</span> using 5-fold cross-validation, achieving improved segmentation performance to aid presurgical evaluation</li>
-                <li>Published research findings in <a href="https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2025.1601815/abstract" className="underline" target="_blank" rel="noreferrer">Frontiers in Artificial Intelligence</a></li>
+                <li>Trained nnU-Net models on MRI data from <span className="font-semibold">85 subjects</span> with 5-fold cross-validation, achieving Dice score <span className="font-semibold">0.52 ± 0.05</span> for epilepsy lesion segmentation; results published in <a href="https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2025.1601815/abstract" className="underline" target="_blank" rel="noreferrer">Frontiers in Artificial Intelligence</a></li>
+                <li>Designed an automated slice selection method ranking MRI slices by voxel intensity to highlight lesion-rich regions; improved lesion detection accuracy by <span className="font-semibold">30%</span> for FCD Type II</li>
               </ul>
             </div>
           </div>
