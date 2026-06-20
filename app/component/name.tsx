@@ -11,11 +11,11 @@ export default function Name() {
         I'm a{' '}
         <TypeAnimation
           sequence={[
-            'Developer',
+            'Distributed Systems Engineer',
             2000,
-            'Student',
+            'Backend & Infrastructure Developer',
             2000,
-            'Tech Enthusiast',
+            'Published ML Researcher',
             2000,
           ]}
           wrapper="span"

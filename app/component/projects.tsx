@@ -8,6 +8,7 @@ interface ProjectCardProps {
   link: string;
   tech: string[];
   points: string[];
+  status?: string;
   media?: {
     type: "image" | "video";
     url: string;
@@ -16,7 +17,7 @@ interface ProjectCardProps {
   index: number;
 }
 
-const ProjectCard = ({ title, description, link, tech, points, media, index }: ProjectCardProps) => {
+const ProjectCard = ({ title, description, link, tech, points, status, media, index }: ProjectCardProps) => {
   return (
     <motion.a
       href={link}
@@ -67,7 +68,14 @@ const ProjectCard = ({ title, description, link, tech, points, media, index }: P
       
       <div className="p-6">
         <div className="flex justify-between items-start">
-          <h3 className="text-lg font-semibold text-white dark:text-gray-900 group-hover:text-white/90 dark:group-hover:text-gray-900/90 transition-colors">{title}</h3>
+          <div className="flex items-center gap-2 flex-wrap">
+            <h3 className="text-lg font-semibold text-white dark:text-gray-900 group-hover:text-white/90 dark:group-hover:text-gray-900/90 transition-colors">{title}</h3>
+            {status && (
+              <span className="text-xs px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30 dark:bg-blue-500/10 dark:text-blue-700 dark:border-blue-500/20">
+                {status}
+              </span>
+            )}
+          </div>
           <HiExternalLink className="w-5 h-5 text-gray-400 dark:text-gray-600 group-hover:text-white dark:group-hover:text-gray-900 transition-colors" />
         </div>
         <p className="text-sm text-gray-400 dark:text-gray-600 mt-2 group-hover:text-gray-300 dark:group-hover:text-gray-700 transition-colors">{description}</p>
@@ -96,13 +104,25 @@ const ProjectCard = ({ title, description, link, tech, points, media, index }: P
 export default function Projects() {
   const projects = [
     {
+      title: "Forge — Distributed Task Queue",
+      description: "A fault-tolerant distributed job queue with a Raft-replicated coordinator and a chaos-test harness proving zero job loss across node failures.",
+      link: "https://github.com/arnavmalhotra/forge",
+      status: "In Progress",
+      tech: ["Go", "Raft", "gRPC", "BadgerDB", "Prometheus", "Docker"],
+      points: [
+        "Raft-replicated coordinator with leader election and log replication for failover with no lost jobs.",
+        "Effectively-once delivery via idempotency keys, retries with exponential backoff, and dead-letter queues.",
+        "Jepsen-lite chaos harness that kills nodes mid-run and verifies zero job loss and no double-completion."
+      ]
+    },
+    {
       title: "nnU-Net FCD-II Segmentation (Research)",
-      description: "Automated segmentation of FCD type II lesions in 3D FLAIR MRI using nnU-Net.",
+      description: "Automated segmentation of FCD Type II lesions in 3D FLAIR MRI using nnU-Net.",
       link: "https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2025.1601815/abstract",
       tech: ["Python", "PyTorch", "nnU-Net", "NumPy"],
       points: [
-        "Proposed automated axial FLAIR slice selection by peak voxel intensity (top 5 slices).",
-        "Trained nnU-Net with 5-fold cross-validation on MRI from 85 FCD-II subjects.",
+        "Trained nnU-Net with 5-fold cross-validation on MRI from 85 FCD-II subjects (Dice 0.52 ± 0.05).",
+        "Proposed automated axial FLAIR slice selection by peak voxel intensity, improving detection 30%.",
         "Published in Frontiers in Artificial Intelligence (2025)."
       ],
       media: {
@@ -112,34 +132,34 @@ export default function Projects() {
       }
     },
     {
+      title: "OneTimeTable",
+      description: "A live SaaS that turns course syllabi into a calendar — built on a data-extraction pipeline.",
+      link: "https://onetimetable.org",
+      tech: ["Next.js", "TypeScript", "FastAPI", "Redis", "LLMs"],
+      points: [
+        "Shipped a live product (50+ users, 35+ extension installs) that auto-extracts deadlines from syllabi.",
+        "Built an LLM extraction pipeline (95% accuracy) exporting to Google & Apple Calendar.",
+        "Cut load times 60% with Redis caching."
+      ],
+      media: {
+        type: "image" as const,
+        url: "/projects/onetimetable.png",
+        alt: "OneTimeTable Dashboard"
+      }
+    },
+    {
       title: "SuperchargedNotes",
-      description: "AI platform leveraging OCR to convert 5+ note formats into structured markdown.",
+      description: "Full-stack AI platform using OCR to convert 5+ note formats into structured markdown.",
       link: "https://superchargednotes.com",
       tech: ["FastAPI", "PostgreSQL", "Next.js", "TypeScript"],
       points: [
-        "Built full-stack OCR platform converting 5+ note formats to markdown with 90% accuracy.",
+        "Built an OCR pipeline converting 5+ note formats to markdown at 90% accuracy.",
         "Created AI study tools (quizzes, flashcards, summaries) reducing prep time by 40%."
       ],
       media: {
         type: "image" as const,
         url: "/projects/superchargednotes.png",
         alt: "SuperchargedNotes Platform"
-      }
-    },
-    {
-      title: "OneTimeTable",
-      description: "A unified dashboard for students to manage course schedules and academic planning",
-      link: "https://onetimetable.org",
-      tech: ["FastAPI", "MongoDB", "Next.js", "Redis"],
-      points: [
-        "Developed student dashboard, achieving 50+ users & 35+ extension installs.",
-        "Automated data extraction using LLMs (95% accuracy), saving students 3 hrs/semester.",
-        "Improved performance with Redis caching, cutting load times by 60%."
-      ],
-      media: {
-        type: "image" as const,
-        url: "/projects/onetimetable.png",
-        alt: "OneTimeTable Dashboard"
       }
     },
     {
